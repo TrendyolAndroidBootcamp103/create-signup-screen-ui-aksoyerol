@@ -1,4 +1,6 @@
-package school.cactus.succulentshop
+package school.cactus.succulentshop.ui.validators
+
+import school.cactus.succulentshop.R
 
 
 class IdentifierValidator : Validator {
