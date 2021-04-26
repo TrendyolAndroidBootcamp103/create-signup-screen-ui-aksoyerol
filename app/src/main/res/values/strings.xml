@@ -13,7 +13,7 @@
     <string name="already_have_an_account">Already Have an Account?</string>
     <string name="email_is_invalid">Email is invalid.</string>
     <string name="username_is_required">Username is required.</string>
-    <string name="username_can_only_include_az_09_characters">Username can only include a–z, 0-9 and _ characters.</string>
+    <string name="username_can_only_include_az_09_characters">Username can only include a–z, 0–9 and _ characters.</string>
     <string name="username_is_too_short">Username is too short.</string>
     <string name="username_is_too_long">Username is too long.</string>
     <string name="password_is_required">Password is required.</string>
