@@ -11,8 +11,11 @@
         android:theme="@style/Theme.SucculentShop">
         <activity
             android:name=".ui.LoginActivity"
-            android:exported="true" />
-        <activity android:name=".ui.SignUpActivity">
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SignUpActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
