@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="@dimen/padding_16dp"
     tools:context=".ui.LoginActivity">
 
     <com.google.android.material.textfield.TextInputLayout
@@ -13,7 +13,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="@dimen/padding_16dp"
         android:hint="@string/email_or_username">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -36,13 +36,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword" />
-
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/logInButton"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="@dimen/height_auth_button"
         android:layout_marginBottom="8dp"
         android:text="@string/log_in" />
 
@@ -50,6 +49,6 @@
         android:id="@+id/createAccountButton"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_height="@dimen/height_auth_button"
         android:text="@string/create_an_account" />
 </LinearLayout>
