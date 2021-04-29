@@ -19,7 +19,6 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         supportActionBar?.title = getString(R.string.log_in)
 
         binding.apply {
@@ -27,7 +26,6 @@ class LoginActivity : AppCompatActivity() {
                 passwordInputLayout.validate(passwordValidator)
                 identifierInputLayout.validate(identifierValidator)
             }
-
             createAccountButton.setOnClickListener { navigateToSignUpScreen() }
         }
     }
@@ -36,18 +34,4 @@ class LoginActivity : AppCompatActivity() {
         val intent = Intent(this, SignUpActivity::class.java)
         startActivity(intent)
     }
-
-//    private fun TextInputLayout.validate() {
-//        val errorMessage = validator().validate(editText!!.text.toString())
-//        error = errorMessage?.resolveAsString()
-//        isErrorEnabled = errorMessage != null
-//    }
-//
-//    private fun Int.resolveAsString() = getString(this)
-//
-//    private fun TextInputLayout.validator() = when (this) {
-//        binding.identifierInputLayout -> identifierValidator
-//        binding.passwordInputLayout -> passwordValidator
-//        else -> throw IllegalArgumentException("Cannot find any validator for the given TextInputLayout")
-//    }
 }

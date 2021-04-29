@@ -1,6 +1,5 @@
 package school.cactus.succulentshop.ui
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import school.cactus.succulentshop.R
@@ -11,10 +10,6 @@ import school.cactus.succulentshop.ui.validators.UserNameValidator
 import school.cactus.succulentshop.ui.validators.validate
 
 private lateinit var binding: ActivitySignUpBinding
-private val emailValidator = EmailValidator()
-private val userNameValidator = UserNameValidator()
-private val advancedPasswordValidator = AdvancedPasswordValidator()
-
 class SignUpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,19 +18,10 @@ class SignUpActivity : AppCompatActivity() {
         supportActionBar?.title = getString(R.string.sign_up)
 
         binding.signUpButton.setOnClickListener {
-            binding.emailInputLayout.validate(emailValidator)
-            binding.usernameInputLayout.validate(userNameValidator)
-            binding.passwordInputLayout.validate(advancedPasswordValidator)
+            binding.emailInputLayout.validate(EmailValidator())
+            binding.usernameInputLayout.validate(UserNameValidator())
+            binding.passwordInputLayout.validate(AdvancedPasswordValidator())
         }
-
-        binding.haveAnAccountButton.setOnClickListener {
-            navigateToLoginScreen()
-        }
+        binding.haveAnAccountButton.setOnClickListener { onBackPressed() }
     }
-
-    private fun navigateToLoginScreen() {
-        val intent = Intent(this, LoginActivity::class.java)
-        startActivity(intent)
-    }
-
 }
