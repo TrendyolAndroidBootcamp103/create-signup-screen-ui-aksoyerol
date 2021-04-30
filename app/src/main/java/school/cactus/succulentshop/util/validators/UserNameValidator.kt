@@ -1,4 +1,4 @@
-package school.cactus.succulentshop.ui.validators
+package school.cactus.succulentshop.util.validators
 
 import school.cactus.succulentshop.R
 import java.util.regex.Pattern

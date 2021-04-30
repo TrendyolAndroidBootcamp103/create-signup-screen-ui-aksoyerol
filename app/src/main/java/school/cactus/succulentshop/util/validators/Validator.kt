@@ -1,4 +1,4 @@
-package school.cactus.succulentshop.ui.validators
+package school.cactus.succulentshop.util.validators
 
 interface Validator {
     fun validate(field: String): Int?
