@@ -15,6 +15,13 @@ class EmailValidatorTest {
     }
 
     @Test
+    fun `validate test with empty mail`() {
+        val mail = ""
+        val response = validator.validate(mail)
+        assertThat(response).isEqualTo(R.string.email_is_required)
+    }
+
+    @Test
     fun `validate test shorter than 5 characters`() {
         val mail = "e@g."
         val response = validator.validate(mail)
