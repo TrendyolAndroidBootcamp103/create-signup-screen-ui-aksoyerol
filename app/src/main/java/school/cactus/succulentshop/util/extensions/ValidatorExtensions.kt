@@ -1,4 +1,4 @@
-package school.cactus.succulentshop.util.helpers
+package school.cactus.succulentshop.util.extensions
 
 import com.google.android.material.textfield.TextInputLayout
 import school.cactus.succulentshop.util.validators.Validator

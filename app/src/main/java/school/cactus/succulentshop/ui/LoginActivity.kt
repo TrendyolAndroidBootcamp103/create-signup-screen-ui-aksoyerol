@@ -1,10 +1,11 @@
 package school.cactus.succulentshop.ui
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import school.cactus.succulentshop.R
 import school.cactus.succulentshop.databinding.ActivityLoginBinding
-import school.cactus.succulentshop.util.helpers.validate
+import school.cactus.succulentshop.util.extensions.validate
 import school.cactus.succulentshop.util.validators.IdentifierValidator
 import school.cactus.succulentshop.util.validators.PasswordValidator
 
@@ -25,7 +26,12 @@ class LoginActivity : AppCompatActivity() {
                 passwordInputLayout.validate(passwordValidator)
                 identifierInputLayout.validate(identifierValidator)
             }
-            createAccountButton.setOnClickListener { onBackPressed() }
+            createAccountButton.setOnClickListener { navigateToSignUpScreen() }
         }
+    }
+
+    private fun navigateToSignUpScreen() {
+        val intent = Intent(this, SignUpActivity::class.java)
+        startActivity(intent)
     }
 }
