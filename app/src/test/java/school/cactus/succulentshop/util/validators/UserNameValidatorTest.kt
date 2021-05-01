@@ -6,8 +6,6 @@ import org.junit.Test
 import school.cactus.succulentshop.R
 
 class UserNameValidatorTest {
-
-
     private lateinit var validator: Validator
 
     @Before
